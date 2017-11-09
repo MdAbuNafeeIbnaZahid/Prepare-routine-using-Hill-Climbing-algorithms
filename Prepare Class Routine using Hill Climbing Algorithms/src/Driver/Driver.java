@@ -3,9 +3,9 @@ package Driver;
 import IO.*;
 import IO.Input.ScannerFactory;
 import IO.Output.PrintWriterFactory;
-import Routine.Problem;
-import Routine.ProblemFactory;
-
+import Routine.Configuration;
+import Routine.ConfigurationFactory;
+import Routine.*;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
@@ -24,9 +24,9 @@ public class Driver {
 
 //        System.out.println("in / out ready");
 
-        Problem problem = ProblemFactory.getProblem(in);
+        Configuration configuration = ConfigurationFactory.getProblem(in);
 
-        out.println( problem );
+        out.println( configuration );
 
 
 

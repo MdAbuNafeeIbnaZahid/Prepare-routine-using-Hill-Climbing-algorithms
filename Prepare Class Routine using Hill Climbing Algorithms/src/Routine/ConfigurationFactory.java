@@ -5,16 +5,16 @@ import java.util.Scanner;
 /**
  * Created by nafee on 11/9/17.
  */
-public class ProblemFactory {
+public class ConfigurationFactory {
 
     private static int[][][] take3dIntArInp(int x, int y, int z, Scanner scanner)
     {
-        int[][][] ret = new int[x][y][z];
-        for (int a = 0; a < ret.length; a++)
+        int[][][] ret = new int[x+9][y+9][z+9];
+        for (int a = 1; a <=x; a++)
         {
-            for (int b = 0; b < ret[a].length; b++)
+            for (int b = 1; b <= y; b++)
             {
-                for (int c = 0; c < ret[a][b].length; c++)
+                for (int c = 1; c <= z; c++)
                 {
                     int val;
                     val = scanner.nextInt();
@@ -25,7 +25,7 @@ public class ProblemFactory {
         return ret;
     }
 
-    public static Problem getProblem(Scanner scanner)
+    public static Configuration getProblem(Scanner scanner)
     {
         int periodCnt;
         int roomCnt;
@@ -40,7 +40,7 @@ public class ProblemFactory {
 
         int[][][] requirementAr = take3dIntArInp(roomCnt, classCnt, teacherCnt, scanner);
 
-        Problem problem = new Problem(periodCnt, roomCnt, classCnt, teacherCnt, requirementAr);
-        return problem;
+        Configuration configuration= new Configuration(periodCnt, roomCnt, classCnt, teacherCnt, requirementAr);
+        return configuration;
     }
 }
