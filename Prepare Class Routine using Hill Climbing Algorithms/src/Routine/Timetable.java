@@ -3,14 +3,16 @@ package Routine;
 import Copy.UnoptimizedDeepCopy;
 import HillClimbing.CandidateSolution;
 
+import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 
 /**
  * Created by nafee on 11/9/17.
  */
-public class Timetable implements CandidateSolution {
+public class Timetable implements CandidateSolution, Serializable {
 
     private int periodCnt;
     private int roomCnt;
@@ -22,7 +24,7 @@ public class Timetable implements CandidateSolution {
     private int teacherWeight;
 
 
-    private List<Period>  schedule;
+    private List<Period>  schedule = new ArrayList<Period>();
 
     public Timetable(int periodCnt, int roomCnt, int classCnt, int teacherCnt, int roomWeight,
                      int classWeight, int teacherWeight)
@@ -37,10 +39,19 @@ public class Timetable implements CandidateSolution {
         this.classWeight = classWeight;
         this.teacherWeight = teacherWeight;
 
-        schedule = new ArrayList<Period>(periodCnt+9);
+//        schedule = new ArrayList<Period>(periodCnt+9);
+
+//        schedule = Arrays.asList( new Period[periodCnt+9] );
+        for (int a = 1; a <= periodCnt+9; a++)
+        {
+            schedule.add(null);
+        }
+//        System.out.println( schedule.size() );
+
         for (int a = 1; a <= periodCnt; a++ )
         {
-            schedule.set(a, new Period());
+//            System.out.println(a);
+            schedule.add(a, new Period() );
         }
     }
 
@@ -74,6 +85,12 @@ public class Timetable implements CandidateSolution {
         assert doesContains(oldPeriodSlot, element) : "Element not present in that period";
 
         Timetable newTimeTable = (Timetable) UnoptimizedDeepCopy.copy(this);
+
+        System.out.println( this.doesContains(oldPeriodSlot, element) );
+        System.out.println( newTimeTable.doesContains(oldPeriodSlot, element) );
+
+
+
         newTimeTable.removeElement(oldPeriodSlot, element);
         newTimeTable.addElement(newPeriodSlot, element);
 

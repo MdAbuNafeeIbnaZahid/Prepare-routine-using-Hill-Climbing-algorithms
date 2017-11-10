@@ -3,6 +3,7 @@ package Routine;
 import HillClimbing.CandidateSolution;
 import HillClimbing.Problem;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
@@ -34,7 +35,7 @@ public class Configuration implements Problem {
     private int teacherCnt;
     private int totalFrequencyCnt;
     private int[][][] frequencyAr;
-    List<Element> elementList;
+    List<Element> elementList = new ArrayList<Element>();
 
     public void makeElementList()
     {

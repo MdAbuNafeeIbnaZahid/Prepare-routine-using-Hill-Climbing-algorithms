@@ -30,7 +30,7 @@ public class HillClimb {
 
 
 
-    CandidateSolution climbHillRandomRestart()
+    public CandidateSolution climbHillRandomRestart()
     {
         int minCost = Integer.MAX_VALUE;
         CandidateSolution bestSolution = null;
@@ -48,7 +48,7 @@ public class HillClimb {
         return bestSolution;
     }
 
-    CandidateSolution climbHill( CandidateSolution initialSolution )
+    private CandidateSolution climbHill( CandidateSolution initialSolution )
     {
         while (true)
         {

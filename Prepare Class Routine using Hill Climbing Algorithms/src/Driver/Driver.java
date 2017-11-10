@@ -1,5 +1,6 @@
 package Driver;
 
+import HillClimbing.CandidateSolution;
 import HillClimbing.HillClimb;
 import IO.*;
 import IO.Input.ScannerFactory;
@@ -33,7 +34,11 @@ public class Driver {
 
         HillClimb hillClimb = new HillClimb(configuration);
 
-        
+        CandidateSolution solution = hillClimb.climbHillRandomRestart();
+
+
+
+
 
 
         out.flush();
