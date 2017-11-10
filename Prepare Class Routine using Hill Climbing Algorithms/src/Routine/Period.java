@@ -49,7 +49,7 @@ public class Period {
 
         conflictCost = new ClassCost();
         int costInClass = conflictCost.getSingleConflictCost(elements.iterator(), classWeight);
-        
+
         conflictCost = new TeacherCost();
         int costInTeacher = conflictCost.getSingleConflictCost(elements.iterator(), teacherWeight);
 

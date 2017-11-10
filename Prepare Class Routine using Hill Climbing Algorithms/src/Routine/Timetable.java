@@ -13,17 +13,17 @@ public class Timetable {
     private int classCnt;
     private int teacherCnt;
 
-    private List<List<Element>>  schedule;
+    private List<Period>  schedule;
 
     public Timetable(int periodCnt, int roomCnt, int classCnt, int teacherCnt) {
         this.periodCnt = periodCnt;
         this.roomCnt = roomCnt;
         this.classCnt = classCnt;
         this.teacherCnt = teacherCnt;
-        schedule = new ArrayList<List<Element>>(periodCnt+9);
+        schedule = new ArrayList<Period>(periodCnt+9);
         for (int a = 1; a <= periodCnt; a++ )
         {
-            schedule.set(a, new ArrayList<Element>());
+            schedule.set(a, new Period());
         }
     }
 
