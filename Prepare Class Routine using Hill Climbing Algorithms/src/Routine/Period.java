@@ -32,8 +32,29 @@ public class Period {
         return bool;
     }
 
-    Iterator<Element> getIterator()
+    // I think this method is unnecessary
+//    Iterator<Element> getIterator()
+//    {
+//        return elements.iterator();
+//    }
+
+
+    int getCost(int roomWeight, int classWeight, int teacherWeight)
     {
-        return elements.iterator();
+        int costInPeriod = 0;
+        ConflictCost conflictCost;
+
+        conflictCost = new RoomCost();
+        int costInRoom = conflictCost.getSingleConflictCost(elements.iterator(), roomWeight);
+
+        conflictCost = new ClassCost();
+        int costInClass = conflictCost.getSingleConflictCost(elements.iterator(), classWeight);
+        
+        conflictCost = new TeacherCost();
+        int costInTeacher = conflictCost.getSingleConflictCost(elements.iterator(), teacherWeight);
+
+        costInPeriod = costInRoom + costInClass + costInTeacher;
+        return costInPeriod;
+
     }
 }

@@ -7,9 +7,9 @@ import java.util.*;
  */
 public abstract class ConflictCost {
 
-    abstract int getVal(Element element); // it could be class, teacher, room
+    protected abstract int getVal(Element element); // it could be class, teacher, room
 
-    Iterator<Integer> getListValIterator( Iterator<Element> iterator )
+    private Iterator<Integer> getListValIterator( Iterator<Element> iterator )
     {
         List<Integer> vals = new ArrayList<Integer>();
         while (iterator.hasNext())
@@ -21,7 +21,7 @@ public abstract class ConflictCost {
         return vals.iterator();
     }
 
-    Iterator<Integer> getConflictCntIterator( Iterator<Integer> iterator )
+    private Iterator<Integer> getConflictCntIterator( Iterator<Integer> iterator )
     {
         Map<Integer, Integer> map = new HashMap<Integer, Integer>();
         while (iterator.hasNext() )
@@ -34,7 +34,7 @@ public abstract class ConflictCost {
         return conflictCntIterator;
     }
 
-    int getSingleWeightCost( Iterator<Integer> conflictCntIterator )
+    private int getSingleWeightCost( Iterator<Integer> conflictCntIterator )
     {
         int cost = 0;
         while (conflictCntIterator.hasNext())
