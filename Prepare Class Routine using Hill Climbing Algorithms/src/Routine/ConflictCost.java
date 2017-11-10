@@ -7,7 +7,7 @@ import java.util.*;
  */
 public abstract class ConflictCost {
 
-    protected abstract int getVal(Element element); // it could be class, teacher, room
+    abstract int getVal(Element element); // it could be class, teacher, room
 
     private Iterator<Integer> getListValIterator( Iterator<Element> iterator )
     {

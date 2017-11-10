@@ -1,12 +1,32 @@
 package Routine;
 
+import HillClimbing.CandidateSolution;
+import HillClimbing.Problem;
+
 import java.util.Arrays;
 import java.util.List;
 
 /**
  * Created by nafee on 11/9/17.
  */
-public class Configuration {
+public class Configuration implements Problem {
+
+   private int roomWeight = 1;
+   private int classWeight = 2;
+   private int teacherWeight = 3;
+
+    public int getRoomWeight() {
+        return roomWeight;
+    }
+
+    public int getClassWeight() {
+        return classWeight;
+    }
+
+    public int getTeacherWeight() {
+        return teacherWeight;
+    }
+
     private int periodCnt;
     private int roomCnt;
     private int classCnt;
@@ -113,5 +133,16 @@ public class Configuration {
                 ", frequencyAr=" + freqArToStr() +
                 ", elementList=" + elementList +
                 '}';
+    }
+
+    @Override
+    public CandidateSolution getRandomCandidateSolution()
+    {
+        Timetable timetable = new Timetable(periodCnt, roomCnt, classCnt, teacherCnt, roomWeight, classWeight, teacherWeight);
+        for (Element element : elementList)
+        {
+
+        }
+        return timetable;
     }
 }

@@ -5,7 +5,7 @@ package Routine;
  */
 public class ClassCost extends ConflictCost {
     @Override
-    int getVal(Element element) {
+    public int getVal(Element element) {
         return element.getCls();
     }
 }

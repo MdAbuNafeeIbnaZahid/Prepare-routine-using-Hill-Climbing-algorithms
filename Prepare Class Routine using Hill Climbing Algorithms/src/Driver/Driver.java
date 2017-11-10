@@ -24,6 +24,8 @@ public class Driver {
 
 //        System.out.println("in / out ready");
 
+
+
         Configuration configuration = ConfigurationFactory.getProblem(in);
 
         out.println( configuration );
