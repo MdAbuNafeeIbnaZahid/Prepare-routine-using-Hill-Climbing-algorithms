@@ -5,6 +5,7 @@ import HillClimbing.Problem;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Random;
 
 /**
  * Created by nafee on 11/9/17.
@@ -141,7 +142,9 @@ public class Configuration implements Problem {
         Timetable timetable = new Timetable(periodCnt, roomCnt, classCnt, teacherCnt, roomWeight, classWeight, teacherWeight);
         for (Element element : elementList)
         {
-
+            Random random = new Random();
+            int periodSlot = 1 + random.nextInt(periodCnt);
+            timetable.addElement(periodSlot, element);
         }
         return timetable;
     }

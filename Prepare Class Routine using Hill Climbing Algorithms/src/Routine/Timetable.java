@@ -65,6 +65,7 @@ public class Timetable implements CandidateSolution {
 
     @Override
     public List<CandidateSolution> getSuccessors() {
-        
+        List<CandidateSolution> successors = new ArrayList<CandidateSolution>();
+
     }
 }
