@@ -1,6 +1,7 @@
 package Routine;
 
 import java.util.Arrays;
+import java.util.List;
 
 /**
  * Created by nafee on 11/9/17.
@@ -12,8 +13,25 @@ public class Configuration {
     private int teacherCnt;
     private int totalFrequencyCnt;
     private int[][][] frequencyAr;
+    List<Element> elementList;
 
-
+    public void makeElementList()
+    {
+        for (int a = 1; a <= roomCnt; a++)
+        {
+            for (int b = 1; b <= classCnt; b++)
+            {
+                for (int c = 1; c <= teacherCnt; c++)
+                {
+                    int freq = getFrequency(a, b, c);
+                    for (int d = 1; d <= freq; d++)
+                    {
+                        elementList.add( new Element(a, b, c) );
+                    }
+                }
+            }
+        }
+    }
 
     public int getRoomCnt() {
         return roomCnt;
@@ -58,6 +76,7 @@ public class Configuration {
         this.periodCnt = periodCnt;
         this.frequencyAr = requirementAr;
         calculateTotalFrequencyCnt();
+        makeElementList();
     }
 
     public int getFrequency(int room, int cls, int teacher)
@@ -85,13 +104,14 @@ public class Configuration {
 
     @Override
     public String toString() {
-        return "Problem{" +
+        return "Configuration{" +
                 "periodCnt=" + periodCnt +
                 ", roomCnt=" + roomCnt +
                 ", classCnt=" + classCnt +
                 ", teacherCnt=" + teacherCnt +
                 ", totalFrequencyCnt=" + totalFrequencyCnt +
                 ", frequencyAr=" + freqArToStr() +
+                ", elementList=" + elementList +
                 '}';
     }
 }

@@ -42,6 +42,7 @@ public class HillClimb {
             {
                 minCost = solution.getCost();
                 bestSolution = solution;
+                System.out.println(minCost);
             }
         }
         return bestSolution;
