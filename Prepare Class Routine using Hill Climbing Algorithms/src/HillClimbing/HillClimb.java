@@ -13,6 +13,7 @@ public class HillClimb {
     }
 
 
+    // CAUTION : it may return null
     private CandidateSolution getBestCandidateSolution(List<CandidateSolution> solutions)
     {
         CandidateSolution bestCandidate = null;
@@ -37,12 +38,15 @@ public class HillClimb {
         while (minCost != 0)
         {
             CandidateSolution initialSolution = problem.getRandomCandidateSolution();
+
+            System.out.println( " initialSolution.getCost() =  " + initialSolution.getCost() );
+
             CandidateSolution solution = climbHill(initialSolution);
             if ( solution.getCost() < minCost )
             {
                 minCost = solution.getCost();
                 bestSolution = solution;
-                System.out.println(minCost);
+                System.out.println( "got a better local maxima " +  minCost);
             }
         }
         return bestSolution;
@@ -54,10 +58,14 @@ public class HillClimb {
         {
             List<CandidateSolution> successors = initialSolution.getSuccessors();
             CandidateSolution bestSuccessor = getBestCandidateSolution(successors);
-            if ( bestSuccessor.getCost() >= initialSolution.getCost() )
+
+
+            if ( bestSuccessor==null || bestSuccessor.getCost() >= initialSolution.getCost() )
             {
                 break;
             }
+
+            System.out.println( " bestSuccessor.getCost() =  " + bestSuccessor.getCost() );
             initialSolution = bestSuccessor;
         }
 

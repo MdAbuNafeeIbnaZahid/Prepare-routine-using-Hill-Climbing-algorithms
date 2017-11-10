@@ -9,6 +9,7 @@ import Routine.Configuration;
 import Routine.ConfigurationFactory;
 import Routine.*;
 import java.io.PrintWriter;
+import java.sql.Time;
 import java.util.Scanner;
 
 /**
@@ -36,6 +37,9 @@ public class Driver {
 
         CandidateSolution solution = hillClimb.climbHillRandomRestart();
 
+        Timetable timetable = (Timetable)solution;
+
+        out.println("timeTable = " + timetable);
 
 
 

@@ -63,4 +63,11 @@ public class Period implements Serializable {
     {
         return elements.iterator();
     }
+
+    @Override
+    public String toString() {
+        return "Period{" +
+                "elements=" + elements +
+                '}';
+    }
 }

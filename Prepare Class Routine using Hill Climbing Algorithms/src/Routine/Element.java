@@ -48,4 +48,13 @@ public class Element implements Serializable {
         result = 31 * result + teacher;
         return result;
     }
+
+    @Override
+    public String toString() {
+        return "Element{" +
+                "room=" + room +
+                ", cls=" + cls +
+                ", teacher=" + teacher +
+                '}';
+    }
 }

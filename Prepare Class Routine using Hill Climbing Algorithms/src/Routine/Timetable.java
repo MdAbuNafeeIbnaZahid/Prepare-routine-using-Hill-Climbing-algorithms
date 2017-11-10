@@ -86,8 +86,8 @@ public class Timetable implements CandidateSolution, Serializable {
 
         Timetable newTimeTable = (Timetable) UnoptimizedDeepCopy.copy(this);
 
-        System.out.println( this.doesContains(oldPeriodSlot, element) );
-        System.out.println( newTimeTable.doesContains(oldPeriodSlot, element) );
+//        System.out.println( this.doesContains(oldPeriodSlot, element) );
+//        System.out.println( newTimeTable.doesContains(oldPeriodSlot, element) );
 
 
 
@@ -102,19 +102,27 @@ public class Timetable implements CandidateSolution, Serializable {
     @Override
     public int getCost() {
         int cost = 0;
-        for ( Period period : schedule )
+        for (int a = 1; a <= periodCnt; a++)
         {
+            Period period = schedule.get(a);
             cost += period.getCost(roomWeight, classWeight, teacherWeight);
         }
         return cost;
     }
 
+    // CAUTION : it may return an empty list
     @Override
     public List<CandidateSolution> getSuccessors() {
         List<CandidateSolution> successors = new ArrayList<CandidateSolution>();
         for (int a = 1; a <= periodCnt; a++) // old period slot
         {
             Iterator<Element> elementIterator = schedule.get(a).getElementsIterator();
+
+            if ( schedule.get(a).getCost(roomWeight, classWeight, teacherWeight) == 0 )
+            {
+                continue;
+            }
+
             while (elementIterator.hasNext())
             {
                 Element element = elementIterator.next();
@@ -131,5 +139,31 @@ public class Timetable implements CandidateSolution, Serializable {
 
         }
         return successors;
+    }
+
+    private String scheduleToSTr()
+    {
+        String ret = "\n";
+        for (int a = 1; a <= periodCnt; a++)
+        {
+            ret += "period " + a + "\n";
+            ret += schedule.get(a).toString() + "\n";
+        }
+        ret += "\n";
+        return ret;
+    }
+
+    @Override
+    public String toString() {
+        return "Timetable{" +
+                "periodCnt=" + periodCnt +
+                ", roomCnt=" + roomCnt +
+                ", classCnt=" + classCnt +
+                ", teacherCnt=" + teacherCnt +
+                ", roomWeight=" + roomWeight +
+                ", classWeight=" + classWeight +
+                ", teacherWeight=" + teacherWeight +
+                ", schedule=" + scheduleToSTr() +
+                '}';
     }
 }
