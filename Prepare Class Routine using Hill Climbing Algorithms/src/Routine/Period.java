@@ -57,4 +57,9 @@ public class Period {
         return costInPeriod;
 
     }
+
+    public Iterator<Element> getElementsIterator()
+    {
+        return elements.iterator();
+    }
 }

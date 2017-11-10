@@ -1,5 +1,6 @@
 package Driver;
 
+import HillClimbing.HillClimb;
 import IO.*;
 import IO.Input.ScannerFactory;
 import IO.Output.PrintWriterFactory;
@@ -30,6 +31,9 @@ public class Driver {
 
         out.println( configuration );
 
+        HillClimb hillClimb = new HillClimb(configuration);
+
+        
 
 
         out.flush();

@@ -1,8 +1,10 @@
 package Routine;
 
+import Copy.UnoptimizedDeepCopy;
 import HillClimbing.CandidateSolution;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -59,10 +61,24 @@ public class Timetable implements CandidateSolution {
         return bool;
     }
 
+    boolean removeElement(int periodSlot, Element element)
+    {
+        assert doesContains(periodSlot, element) : " Element not present in that period ";
+        boolean bool = schedule.get(periodSlot).remove(element);
+        return bool;
+    }
+
 
     Timetable getNewTimeTable(int oldPeriodSlot, int newPeriodSlot, Element element)
     {
         assert doesContains(oldPeriodSlot, element) : "Element not present in that period";
+
+        Timetable newTimeTable = (Timetable) UnoptimizedDeepCopy.copy(this);
+        newTimeTable.removeElement(oldPeriodSlot, element);
+        newTimeTable.addElement(newPeriodSlot, element);
+
+        return newTimeTable;
+
     }
 
 
@@ -79,6 +95,24 @@ public class Timetable implements CandidateSolution {
     @Override
     public List<CandidateSolution> getSuccessors() {
         List<CandidateSolution> successors = new ArrayList<CandidateSolution>();
+        for (int a = 1; a <= periodCnt; a++) // old period slot
+        {
+            Iterator<Element> elementIterator = schedule.get(a).getElementsIterator();
+            while (elementIterator.hasNext())
+            {
+                Element element = elementIterator.next();
+                for (int b = 1; b <= periodCnt; b++) // new period slot
+                {
+                    if (a == b)
+                    {
+                        continue;
+                    }
+                    CandidateSolution newTimeTable = this.getNewTimeTable(a, b, element);
+                    successors.add(newTimeTable);
+                }
+            }
 
+        }
+        return successors;
     }
 }

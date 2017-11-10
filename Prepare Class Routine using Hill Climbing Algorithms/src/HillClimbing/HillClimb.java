@@ -30,7 +30,7 @@ public class HillClimb {
 
 
 
-    CandidateSolution climbHillRandomRestart(Problem problem)
+    CandidateSolution climbHillRandomRestart()
     {
         int minCost = Integer.MAX_VALUE;
         CandidateSolution bestSolution = null;
