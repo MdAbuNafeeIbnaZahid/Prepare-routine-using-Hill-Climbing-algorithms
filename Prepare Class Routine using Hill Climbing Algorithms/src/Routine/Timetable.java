@@ -52,6 +52,19 @@ public class Timetable implements CandidateSolution {
         return bool;
     }
 
+    boolean doesContains(int periodSlot, Element element)
+    {
+        boolean bool;
+        bool = schedule.get(periodSlot).doesContain(element);
+        return bool;
+    }
+
+
+    Timetable getNewTimeTable(int oldPeriodSlot, int newPeriodSlot, Element element)
+    {
+        assert doesContains(oldPeriodSlot, element) : "Element not present in that period";
+    }
+
 
     @Override
     public int getCost() {
