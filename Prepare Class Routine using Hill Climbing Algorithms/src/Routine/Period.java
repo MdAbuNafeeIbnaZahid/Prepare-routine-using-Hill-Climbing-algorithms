@@ -1,5 +1,7 @@
 package Routine;
 
+import Copy.UnoptimizedDeepCopy;
+
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -12,8 +14,25 @@ public class Period implements Serializable {
 
     private List<Element> elements = new ArrayList<Element>();
 
+
+
     public Period() {
     }
+
+    public Period getCopy()
+    {
+        return (Period) UnoptimizedDeepCopy.copy(this);
+    }
+
+//    static int getCostChange(Period from, Period to, Element element)
+//    {
+//        from = from.getCopy();
+//        to = to.getCopy();
+//
+//        assert from.doesContain(element) : " Element is not present in from Period ";
+//
+//        int prevCost = from.getCost()
+//    }
 
     boolean add( Element element )
     {

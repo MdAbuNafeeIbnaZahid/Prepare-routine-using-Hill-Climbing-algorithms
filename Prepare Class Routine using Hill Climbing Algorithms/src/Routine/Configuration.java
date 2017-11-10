@@ -141,9 +141,9 @@ public class Configuration implements Problem {
     public CandidateSolution getRandomCandidateSolution()
     {
         Timetable timetable = new Timetable(periodCnt, roomCnt, classCnt, teacherCnt, roomWeight, classWeight, teacherWeight);
+        Random random = new Random();
         for (Element element : elementList)
         {
-            Random random = new Random();
             int periodSlot = 1 + random.nextInt(periodCnt);
             timetable.addElement(periodSlot, element);
         }

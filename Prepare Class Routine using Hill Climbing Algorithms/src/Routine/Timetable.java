@@ -26,6 +26,43 @@ public class Timetable implements CandidateSolution, Serializable {
 
     private List<Period>  schedule = new ArrayList<Period>();
 
+    int getPeriodCost(int periodSlot)
+    {
+        assert ( ( 1 <= periodSlot ) && ( periodSlot <= periodCnt ) ) : "It fails ( 1 <= periodSlot ) && ( periodSlot <= periodCnt ) ";
+        return schedule.get(periodSlot).getCost(roomWeight, classWeight, teacherWeight);
+    }
+
+
+    public Timetable getCopy(Timetable timetable) {
+        return  (Timetable) UnoptimizedDeepCopy.copy(timetable);
+    }
+
+
+    public Timetable moveElement(int fromPeriodSlot, int toPeriodSlot, Element element)
+    {
+        this.removeElement(fromPeriodSlot, element);
+        this.addElement(toPeriodSlot, element);
+        return this;
+    }
+
+    // it returns ( newCost - oldCost )
+    public int getCostChange(int fromPeriodSlot, int toPeriodSlot, Element element)
+    {
+        int prevCost = getPeriodCost(fromPeriodSlot) + getPeriodCost(toPeriodSlot);
+
+        // change the time table
+        this.moveElement(fromPeriodSlot, toPeriodSlot, element);
+        int nextCost = getPeriodCost(fromPeriodSlot) + getPeriodCost(toPeriodSlot);
+
+        int costChange = nextCost-prevCost;
+
+        // back to old timetable
+        this.moveElement(toPeriodSlot, fromPeriodSlot, element);
+
+        return costChange;
+    }
+
+
     public Timetable(int periodCnt, int roomCnt, int classCnt, int teacherCnt, int roomWeight,
                      int classWeight, int teacherWeight)
     {
@@ -67,6 +104,7 @@ public class Timetable implements CandidateSolution, Serializable {
 
     boolean doesContains(int periodSlot, Element element)
     {
+        assert ( ( 1 <= periodSlot ) && ( periodSlot <= periodCnt ) ) : "It fails ( 1 <= periodSlot ) && ( periodSlot <= periodCnt ) ";
         boolean bool;
         bool = schedule.get(periodSlot).doesContain(element);
         return bool;
@@ -74,6 +112,7 @@ public class Timetable implements CandidateSolution, Serializable {
 
     boolean removeElement(int periodSlot, Element element)
     {
+        assert ( ( 1 <= periodSlot ) && ( periodSlot <= periodCnt ) ) : "It fails ( 1 <= periodSlot ) && ( periodSlot <= periodCnt ) ";
         assert doesContains(periodSlot, element) : " Element not present in that period ";
         boolean bool = schedule.get(periodSlot).remove(element);
         return bool;
@@ -116,12 +155,12 @@ public class Timetable implements CandidateSolution, Serializable {
         List<CandidateSolution> successors = new ArrayList<CandidateSolution>();
         for (int a = 1; a <= periodCnt; a++) // old period slot
         {
-            Iterator<Element> elementIterator = schedule.get(a).getElementsIterator();
-
-            if ( schedule.get(a).getCost(roomWeight, classWeight, teacherWeight) == 0 )
+            if ( getPeriodCost(a) == 0 )
             {
                 continue;
             }
+
+            Iterator<Element> elementIterator = schedule.get(a).getElementsIterator();
 
             while (elementIterator.hasNext())
             {
@@ -132,6 +171,16 @@ public class Timetable implements CandidateSolution, Serializable {
                     {
                         continue;
                     }
+
+
+
+//                    if ( getCostChange(a, b, element) >= 0 )
+//                    {
+//                        // This move is not going to give me better successor
+//                        continue;
+//                    }
+
+
                     CandidateSolution newTimeTable = this.getNewTimeTable(a, b, element);
                     successors.add(newTimeTable);
                 }
