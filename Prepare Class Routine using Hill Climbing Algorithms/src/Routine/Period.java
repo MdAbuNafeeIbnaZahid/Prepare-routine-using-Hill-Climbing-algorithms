@@ -83,6 +83,11 @@ public class Period implements Serializable {
         return elements.iterator();
     }
 
+    public Iterator<Element> getConflictingElementIterator()
+    {
+        return null;
+    }
+
     @Override
     public String toString() {
         return "Period{" +
