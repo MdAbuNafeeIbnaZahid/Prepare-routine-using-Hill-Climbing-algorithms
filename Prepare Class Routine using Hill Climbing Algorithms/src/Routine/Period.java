@@ -62,16 +62,16 @@ public class Period implements Serializable {
     int getCost(int roomWeight, int classWeight, int teacherWeight)
     {
         int costInPeriod = 0;
-        ConflictCost conflictCost;
+        ConflictFinder conflictFinder;
 
-        conflictCost = new RoomCost();
-        int costInRoom = conflictCost.getSingleConflictCost(elements.iterator(), roomWeight);
+        conflictFinder = new RoomConflictFinder();
+        int costInRoom = conflictFinder.getSingleConflictCost(elements.iterator(), roomWeight);
 
-        conflictCost = new ClassCost();
-        int costInClass = conflictCost.getSingleConflictCost(elements.iterator(), classWeight);
+        conflictFinder = new ClassConflictFinder();
+        int costInClass = conflictFinder.getSingleConflictCost(elements.iterator(), classWeight);
 
-        conflictCost = new TeacherCost();
-        int costInTeacher = conflictCost.getSingleConflictCost(elements.iterator(), teacherWeight);
+        conflictFinder = new TeacherConflictFinder();
+        int costInTeacher = conflictFinder.getSingleConflictCost(elements.iterator(), teacherWeight);
 
         costInPeriod = costInRoom + costInClass + costInTeacher;
         return costInPeriod;

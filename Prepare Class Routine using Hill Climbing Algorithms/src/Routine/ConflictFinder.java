@@ -5,7 +5,7 @@ import java.util.*;
 /**
  * Created by nafee on 11/10/17.
  */
-public abstract class ConflictCost {
+public abstract class ConflictFinder {
 
     abstract int getVal(Element element); // it could be class, teacher, room
 
