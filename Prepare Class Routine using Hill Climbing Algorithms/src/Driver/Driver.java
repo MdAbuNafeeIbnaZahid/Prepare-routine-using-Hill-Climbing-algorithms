@@ -1,15 +1,13 @@
 package Driver;
 
 import HillClimbing.CandidateSolution;
-import HillClimbing.HillClimb;
-import IO.*;
+import HillClimbing.HillClimbing;
 import IO.Input.ScannerFactory;
 import IO.Output.PrintWriterFactory;
 import Routine.Configuration;
 import Routine.ConfigurationFactory;
 import Routine.*;
 import java.io.PrintWriter;
-import java.sql.Time;
 import java.util.Scanner;
 
 /**
@@ -33,9 +31,9 @@ public class Driver {
 
         out.println( configuration );
 
-        HillClimb hillClimb = new HillClimb(configuration);
+        HillClimbing hillClimbing = new HillClimbing(configuration);
 
-        CandidateSolution solution = hillClimb.climbHillRandomRestart();
+        CandidateSolution solution = hillClimbing.climbHillRandomRestart();
 
         Timetable timetable = (Timetable)solution;
 

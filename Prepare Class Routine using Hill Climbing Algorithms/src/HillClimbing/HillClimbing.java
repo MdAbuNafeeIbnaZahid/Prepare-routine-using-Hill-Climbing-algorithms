@@ -5,10 +5,10 @@ import java.util.List;
 /**
  * Created by nafee on 11/10/17.
  */
-public class HillClimb {
+public class HillClimbing {
     Problem problem;
 
-    public HillClimb(Problem problem) {
+    public HillClimbing(Problem problem) {
         this.problem = problem;
     }
 
