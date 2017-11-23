@@ -60,11 +60,11 @@ public abstract class ConflictFinder {
     }
 
 
-    Iterator<Element> getSingleConflictingElementsIterator( Iterator<Element> inpIterator )
+    Iterator<Element> getSingleConflictingElementsIterator(Iterable<Element> elements)
     {
         Iterator<Element> ret;
-        Iterator<Element> inpIteratorClone = (Iterator<Element>) UnoptimizedDeepCopy.copy(inpIterator);
-        Iterator<Integer> listValIterator = getListValIterator( inpIteratorClone );
+
+        Iterator<Integer> listValIterator = getListValIterator( elements.iterator() );
         Map<Integer, Integer> cntMap = new HashMap<>();
 
         while (listValIterator.hasNext())
@@ -73,9 +73,11 @@ public abstract class ConflictFinder {
             cntMap.merge(val, 1, Integer::sum);
         }
         Set<Element> singleConflictingElements = new HashSet<Element>();
-        while (inpIterator.hasNext())
+
+        Iterator<Element> elementIterator = elements.iterator();
+        while (elementIterator.hasNext())
         {
-            Element element = inpIterator.next();
+            Element element = elementIterator.next();
             int elementVal = getVal(element);
             if ( cntMap.getOrDefault(elementVal, 0) > 1 )
             {

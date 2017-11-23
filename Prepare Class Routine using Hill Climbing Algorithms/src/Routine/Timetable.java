@@ -150,6 +150,7 @@ public class Timetable implements CandidateSolution, Serializable {
     }
 
     // CAUTION : it may return an empty list
+    // Here the Timetable will NOT return ALL the successors, rather it will SKIP some WORSE successors
     @Override
     public List<CandidateSolution> getSuccessors() {
         List<CandidateSolution> successors = new ArrayList<CandidateSolution>();
@@ -160,7 +161,7 @@ public class Timetable implements CandidateSolution, Serializable {
                 continue;
             }
 
-            Iterator<Element> elementIterator = schedule.get(a).getElementsIterator();
+            Iterator<Element> elementIterator = schedule.get(a).getConflictingElementIterator();
 
             while (elementIterator.hasNext())
             {

@@ -86,14 +86,14 @@ public class Period implements Serializable {
 
 
         ConflictFinder roomConflictFinder = new RoomConflictFinder();
-        Iterator<Element> roomConflictingElementIterator = roomConflictFinder.getSingleConflictingElementsIterator(elements.iterator());
+        Iterator<Element> roomConflictingElementIterator = roomConflictFinder.getSingleConflictingElementsIterator(elements);
 
 
         ConflictFinder classConflictFinder = new ClassConflictFinder();
-        Iterator<Element> classConflictingElementIterator = classConflictFinder.getSingleConflictingElementsIterator(elements.iterator());
+        Iterator<Element> classConflictingElementIterator = classConflictFinder.getSingleConflictingElementsIterator(elements);
 
         ConflictFinder teacherConflictFinder = new TeacherConflictFinder();
-        Iterator<Element> teacherConflictingElementIterator = teacherConflictFinder.getSingleConflictingElementsIterator(elements.iterator());
+        Iterator<Element> teacherConflictingElementIterator = teacherConflictFinder.getSingleConflictingElementsIterator(elements);
 
 
 
