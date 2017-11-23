@@ -7,5 +7,5 @@ import HillClimbing.CandidateSolution;
  */
 
 public interface SuccessorSelector {
-    CandidateSolution getNextSuccessor(Iterable<CandidateSolution> candidateSolutions, CandidateSolution currentCS );
+    CandidateSolution getNextSuccessor(Iterable<CandidateSolution> neighbors, CandidateSolution currentCS );
 }

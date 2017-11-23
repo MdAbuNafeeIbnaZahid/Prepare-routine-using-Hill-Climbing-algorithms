@@ -8,7 +8,15 @@ import HillClimbing.CandidateSolution;
 public class SteepestAscentSelector implements SuccessorSelector
 {
     @Override
-    public CandidateSolution getNextSuccessor(Iterable<CandidateSolution> candidateSolutions, CandidateSolution currentCS) {
-        return null;
+    public CandidateSolution getNextSuccessor(Iterable<CandidateSolution> neighbors, CandidateSolution currentCS) {
+        CandidateSolution ret = null;
+        for ( CandidateSolution neighbor : neighbors )
+        {
+            if ( ret == null || ret.getCost() > currentCS.getCost() )
+            {
+                ret = neighbor;
+            }
+        }
+        return ret;
     }
 }

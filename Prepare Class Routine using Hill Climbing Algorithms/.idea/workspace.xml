@@ -41,16 +41,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ClassConflictFinder.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Routine/ClassConflictFinder.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="26" lean-forward="false" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Driver.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Driver/Driver.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -63,11 +53,21 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="CandidateSolution.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/HillClimbing/CandidateSolution.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="250">
+              <caret line="10" column="51" lean-forward="true" selection-start-line="10" selection-start-column="51" selection-end-line="10" selection-end-column="51" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="HillClimb.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/HillClimbing/HillClimb.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
-              <caret line="61" column="0" lean-forward="true" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+            <state relative-caret-position="323">
+              <caret line="59" column="62" lean-forward="false" selection-start-line="59" selection-start-column="62" selection-end-line="59" selection-end-column="62" />
               <folding />
             </state>
           </provider>
@@ -76,8 +76,8 @@
       <file leaf-file-name="SuccessorSelector.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/HillClimbing/SelectingSuccessor/SuccessorSelector.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="8" column="30" lean-forward="true" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+            <state relative-caret-position="171">
+              <caret line="9" column="88" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="108" />
               <folding />
             </state>
           </provider>
@@ -86,8 +86,8 @@
       <file leaf-file-name="SteepestAscentSelector.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/HillClimbing/SelectingSuccessor/SteepestAscentSelector.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="242">
-              <caret line="11" column="20" lean-forward="true" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+            <state relative-caret-position="418">
+              <caret line="19" column="19" lean-forward="false" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -192,12 +192,12 @@
         <option value="$PROJECT_DIR$/src/Routine/Timetable.java" />
         <option value="$PROJECT_DIR$/src/Routine/ConflictFinder.java" />
         <option value="$PROJECT_DIR$/src/Routine/Period.java" />
-        <option value="$PROJECT_DIR$/src/HillClimbing/SelectingSuccessor/SteepestAscentSelector.java" />
-        <option value="$PROJECT_DIR$/src/HillClimbing/SelectingSuccessor/SuccessorSelector.java" />
         <option value="$PROJECT_DIR$/src/selecting_probabilistically/Item.java" />
         <option value="$PROJECT_DIR$/src/selecting_probabilistically/ItemWithProbability.java" />
         <option value="$PROJECT_DIR$/src/selecting_probabilistically/RandomSelector.java" />
         <option value="$PROJECT_DIR$/src/selecting_probabilistically/ProbabilisticSelector.java" />
+        <option value="$PROJECT_DIR$/src/HillClimbing/SelectingSuccessor/SuccessorSelector.java" />
+        <option value="$PROJECT_DIR$/src/HillClimbing/SelectingSuccessor/SteepestAscentSelector.java" />
       </list>
     </option>
   </component>
@@ -920,7 +920,7 @@
         <state relative-caret-position="711">
           <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -961,14 +961,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="26" lean-forward="false" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/HillClimbing/CandidateSolution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="49" lean-forward="false" selection-start-line="10" selection-start-column="49" selection-end-line="10" selection-end-column="49" />
           <folding />
         </state>
       </provider>
@@ -1064,14 +1056,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/HillClimbing/HillClimb.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="61" column="0" lean-forward="true" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/selecting_probabilistically/ItemWithProbability.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
@@ -1095,18 +1079,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/HillClimbing/HillClimb.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="59" column="62" lean-forward="false" selection-start-line="59" selection-start-column="62" selection-end-line="59" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/HillClimbing/CandidateSolution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="10" column="51" lean-forward="true" selection-start-line="10" selection-start-column="51" selection-end-line="10" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/HillClimbing/SelectingSuccessor/SuccessorSelector.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="30" lean-forward="true" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="30" />
+        <state relative-caret-position="171">
+          <caret line="9" column="88" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="108" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/HillClimbing/SelectingSuccessor/SteepestAscentSelector.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="20" lean-forward="true" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
+        <state relative-caret-position="418">
+          <caret line="19" column="19" lean-forward="false" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
           <folding />
         </state>
       </provider>
