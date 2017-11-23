@@ -1,5 +1,7 @@
 package Routine;
 
+import Copy.UnoptimizedDeepCopy;
+
 import java.util.*;
 
 /**
@@ -56,5 +58,34 @@ public abstract class ConflictFinder {
         int singleWeightCost = getSingleWeightCost(conflictCntIterator);
         return singleWeightCost * weight;
     }
+
+
+    Iterator<Element> getSingleConflictingElementsIterator( Iterator<Element> inpIterator )
+    {
+        Iterator<Element> ret;
+        Iterator<Element> inpIteratorClone = (Iterator<Element>) UnoptimizedDeepCopy.copy(inpIterator);
+        Iterator<Integer> listValIterator = getListValIterator( inpIteratorClone );
+        Map<Integer, Integer> cntMap = new HashMap<>();
+
+        while (listValIterator.hasNext())
+        {
+            Integer val = listValIterator.next();
+            cntMap.merge(val, 1, Integer::sum);
+        }
+        Set<Element> singleConflictingElements = new HashSet<Element>();
+        while (inpIterator.hasNext())
+        {
+            Element element = inpIterator.next();
+            int elementVal = getVal(element);
+            if ( cntMap.getOrDefault(elementVal, 0) > 1 )
+            {
+                singleConflictingElements.add(element);
+            }
+        }
+
+        ret = singleConflictingElements.iterator();
+        return ret;
+    }
+
 
 }
