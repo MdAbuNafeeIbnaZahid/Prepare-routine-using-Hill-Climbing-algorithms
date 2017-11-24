@@ -12,7 +12,7 @@ public class SteepestAscentSelector implements SuccessorSelector
         CandidateSolution ret = null;
         for ( CandidateSolution neighbor : neighbors )
         {
-            if ( ret == null || ret.getCost() > currentCS.getCost() )
+            if ( ret == null || ret.getCost() > neighbor.getCost() )
             {
                 ret = neighbor;
             }

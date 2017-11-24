@@ -18,8 +18,8 @@ public class HillClimbing {
 
 
 
-    // CAUTION : it may return null
-    // I think I don't this method at all as I am using an interface for this work
+//     CAUTION : it may return null
+//     I think I don't this method at all as I am using an interface for this work
 //    private CandidateSolution getNextCandidateSolution(List<CandidateSolution> solutions)
 //    {
 //        CandidateSolution bestCandidate = null;
@@ -64,6 +64,7 @@ public class HillClimbing {
         {
             List<CandidateSolution> successors = initialSolution.getNeighbors();
             CandidateSolution nextCandidateSolution = successorSelector.getNextSuccessor(successors, initialSolution);
+
 
 
             if ( nextCandidateSolution==null || nextCandidateSolution.getCost() >= initialSolution.getCost() )
