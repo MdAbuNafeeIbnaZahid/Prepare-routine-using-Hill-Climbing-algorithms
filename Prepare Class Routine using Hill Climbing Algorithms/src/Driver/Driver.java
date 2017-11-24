@@ -32,7 +32,7 @@ public class Driver {
 
         out.println( configuration );
 
-        HillClimbing hillClimbing = HillClimbingFactory.getHillClimbing(configuration, HillClimbingFactory.STEEPEST_ASCENT_HILL_CLIMBING);
+        HillClimbing hillClimbing = HillClimbingFactory.getHillClimbing(configuration, HillClimbingFactory.STOCHASTIC_HILL_CLIMBING);
 
         CandidateSolution solution = hillClimbing.climbHillRandomRestart();
 

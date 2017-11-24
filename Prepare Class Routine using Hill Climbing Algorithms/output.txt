@@ -18,84 +18,84 @@ Configuration{periodCnt=40, roomCnt=4, classCnt=4, teacherCnt=4, totalFrequencyC
 , elementList=[Element{room=1, cls=1, teacher=1}, Element{room=1, cls=1, teacher=1}, Element{room=1, cls=1, teacher=2}, Element{room=1, cls=1, teacher=2}, Element{room=1, cls=1, teacher=3}, Element{room=1, cls=1, teacher=4}, Element{room=1, cls=1, teacher=4}, Element{room=1, cls=2, teacher=1}, Element{room=1, cls=2, teacher=2}, Element{room=1, cls=2, teacher=3}, Element{room=1, cls=2, teacher=4}, Element{room=1, cls=2, teacher=4}, Element{room=1, cls=3, teacher=1}, Element{room=1, cls=3, teacher=2}, Element{room=1, cls=3, teacher=3}, Element{room=1, cls=3, teacher=4}, Element{room=1, cls=3, teacher=4}, Element{room=1, cls=3, teacher=4}, Element{room=1, cls=3, teacher=4}, Element{room=1, cls=3, teacher=4}, Element{room=1, cls=3, teacher=4}, Element{room=1, cls=4, teacher=1}, Element{room=1, cls=4, teacher=1}, Element{room=1, cls=4, teacher=2}, Element{room=1, cls=4, teacher=2}, Element{room=1, cls=4, teacher=3}, Element{room=1, cls=4, teacher=3}, Element{room=1, cls=4, teacher=3}, Element{room=1, cls=4, teacher=4}, Element{room=1, cls=4, teacher=4}, Element{room=2, cls=1, teacher=1}, Element{room=2, cls=1, teacher=1}, Element{room=2, cls=1, teacher=2}, Element{room=2, cls=1, teacher=2}, Element{room=2, cls=1, teacher=2}, Element{room=2, cls=1, teacher=2}, Element{room=2, cls=1, teacher=2}, Element{room=2, cls=1, teacher=3}, Element{room=2, cls=1, teacher=4}, Element{room=2, cls=1, teacher=4}, Element{room=2, cls=2, teacher=2}, Element{room=2, cls=2, teacher=2}, Element{room=2, cls=2, teacher=2}, Element{room=2, cls=2, teacher=2}, Element{room=2, cls=2, teacher=3}, Element{room=2, cls=2, teacher=3}, Element{room=2, cls=2, teacher=3}, Element{room=2, cls=2, teacher=4}, Element{room=2, cls=2, teacher=4}, Element{room=2, cls=3, teacher=1}, Element{room=2, cls=3, teacher=2}, Element{room=2, cls=3, teacher=2}, Element{room=2, cls=3, teacher=3}, Element{room=2, cls=4, teacher=1}, Element{room=2, cls=4, teacher=1}, Element{room=2, cls=4, teacher=2}, Element{room=2, cls=4, teacher=2}, Element{room=2, cls=4, teacher=3}, Element{room=2, cls=4, teacher=4}, Element{room=2, cls=4, teacher=4}, Element{room=3, cls=1, teacher=1}, Element{room=3, cls=1, teacher=1}, Element{room=3, cls=1, teacher=2}, Element{room=3, cls=1, teacher=3}, Element{room=3, cls=1, teacher=4}, Element{room=3, cls=1, teacher=4}, Element{room=3, cls=2, teacher=3}, Element{room=3, cls=2, teacher=3}, Element{room=3, cls=2, teacher=3}, Element{room=3, cls=2, teacher=3}, Element{room=3, cls=2, teacher=3}, Element{room=3, cls=2, teacher=4}, Element{room=3, cls=3, teacher=1}, Element{room=3, cls=3, teacher=1}, Element{room=3, cls=3, teacher=2}, Element{room=3, cls=3, teacher=3}, Element{room=3, cls=3, teacher=3}, Element{room=3, cls=3, teacher=3}, Element{room=3, cls=3, teacher=3}, Element{room=3, cls=3, teacher=4}, Element{room=3, cls=4, teacher=1}, Element{room=3, cls=4, teacher=1}, Element{room=3, cls=4, teacher=1}, Element{room=3, cls=4, teacher=1}, Element{room=3, cls=4, teacher=1}, Element{room=3, cls=4, teacher=1}, Element{room=3, cls=4, teacher=2}, Element{room=3, cls=4, teacher=3}, Element{room=3, cls=4, teacher=3}, Element{room=3, cls=4, teacher=4}, Element{room=4, cls=1, teacher=1}, Element{room=4, cls=1, teacher=1}, Element{room=4, cls=1, teacher=1}, Element{room=4, cls=1, teacher=2}, Element{room=4, cls=1, teacher=3}, Element{room=4, cls=1, teacher=3}, Element{room=4, cls=1, teacher=4}, Element{room=4, cls=2, teacher=1}, Element{room=4, cls=2, teacher=2}, Element{room=4, cls=2, teacher=2}, Element{room=4, cls=2, teacher=2}, Element{room=4, cls=2, teacher=2}, Element{room=4, cls=2, teacher=3}, Element{room=4, cls=2, teacher=4}, Element{room=4, cls=2, teacher=4}, Element{room=4, cls=2, teacher=4}, Element{room=4, cls=2, teacher=4}, Element{room=4, cls=3, teacher=1}, Element{room=4, cls=3, teacher=1}, Element{room=4, cls=3, teacher=1}, Element{room=4, cls=3, teacher=2}, Element{room=4, cls=3, teacher=2}, Element{room=4, cls=3, teacher=2}, Element{room=4, cls=3, teacher=3}, Element{room=4, cls=3, teacher=3}, Element{room=4, cls=3, teacher=4}, Element{room=4, cls=4, teacher=1}, Element{room=4, cls=4, teacher=1}, Element{room=4, cls=4, teacher=3}, Element{room=4, cls=4, teacher=4}]}
 timeTable = Timetable{periodCnt=40, roomCnt=4, classCnt=4, teacherCnt=4, roomWeight=1, classWeight=2, teacherWeight=3, schedule=
 period 1
-Period{elements=[Element{room=2, cls=4, teacher=4}, Element{room=3, cls=3, teacher=1}, Element{room=1, cls=1, teacher=3}]}
+Period{elements=[Element{room=1, cls=2, teacher=2}, Element{room=2, cls=4, teacher=1}, Element{room=3, cls=1, teacher=3}]}
 period 2
-Period{elements=[Element{room=3, cls=1, teacher=4}, Element{room=1, cls=3, teacher=2}, Element{room=4, cls=2, teacher=3}]}
+Period{elements=[Element{room=1, cls=4, teacher=3}, Element{room=4, cls=2, teacher=2}]}
 period 3
-Period{elements=[Element{room=2, cls=1, teacher=1}, Element{room=3, cls=3, teacher=2}, Element{room=1, cls=4, teacher=3}]}
+Period{elements=[Element{room=2, cls=2, teacher=4}, Element{room=4, cls=3, teacher=1}]}
 period 4
-Period{elements=[Element{room=1, cls=4, teacher=2}, Element{room=3, cls=3, teacher=3}, Element{room=2, cls=1, teacher=1}]}
+Period{elements=[Element{room=2, cls=3, teacher=3}, Element{room=4, cls=2, teacher=4}]}
 period 5
-Period{elements=[Element{room=2, cls=2, teacher=3}, Element{room=4, cls=3, teacher=1}, Element{room=1, cls=1, teacher=4}, Element{room=3, cls=4, teacher=2}]}
+Period{elements=[Element{room=2, cls=2, teacher=2}, Element{room=3, cls=3, teacher=1}, Element{room=4, cls=4, teacher=3}]}
 period 6
-Period{elements=[Element{room=2, cls=2, teacher=4}, Element{room=3, cls=3, teacher=3}, Element{room=4, cls=4, teacher=1}, Element{room=1, cls=1, teacher=2}]}
+Period{elements=[Element{room=3, cls=4, teacher=2}, Element{room=1, cls=3, teacher=4}, Element{room=4, cls=1, teacher=1}]}
 period 7
-Period{elements=[Element{room=1, cls=4, teacher=1}, Element{room=4, cls=3, teacher=4}, Element{room=3, cls=1, teacher=3}, Element{room=2, cls=2, teacher=2}]}
+Period{elements=[Element{room=2, cls=1, teacher=4}, Element{room=3, cls=4, teacher=1}, Element{room=4, cls=3, teacher=3}]}
 period 8
-Period{elements=[Element{room=2, cls=3, teacher=2}, Element{room=4, cls=1, teacher=1}, Element{room=3, cls=4, teacher=3}, Element{room=1, cls=2, teacher=4}]}
+Period{elements=[Element{room=1, cls=4, teacher=2}, Element{room=3, cls=3, teacher=4}, Element{room=2, cls=2, teacher=3}, Element{room=4, cls=1, teacher=1}]}
 period 9
-Period{elements=[Element{room=4, cls=4, teacher=1}, Element{room=3, cls=2, teacher=3}, Element{room=1, cls=1, teacher=2}]}
+Period{elements=[Element{room=3, cls=3, teacher=3}, Element{room=4, cls=1, teacher=1}, Element{room=2, cls=4, teacher=2}, Element{room=1, cls=2, teacher=4}]}
 period 10
-Period{elements=[Element{room=2, cls=2, teacher=2}, Element{room=1, cls=3, teacher=4}, Element{room=3, cls=1, teacher=1}]}
+Period{elements=[Element{room=1, cls=1, teacher=2}, Element{room=3, cls=4, teacher=1}, Element{room=4, cls=2, teacher=4}]}
 period 11
-Period{elements=[Element{room=3, cls=2, teacher=3}, Element{room=2, cls=3, teacher=1}, Element{room=4, cls=1, teacher=2}, Element{room=1, cls=4, teacher=4}]}
+Period{elements=[Element{room=2, cls=1, teacher=1}, Element{room=1, cls=4, teacher=3}, Element{room=4, cls=2, teacher=2}]}
 period 12
-Period{elements=[Element{room=2, cls=3, teacher=3}, Element{room=4, cls=2, teacher=1}, Element{room=3, cls=4, teacher=4}]}
+Period{elements=[Element{room=1, cls=4, teacher=3}, Element{room=2, cls=1, teacher=1}, Element{room=4, cls=2, teacher=2}]}
 period 13
-Period{elements=[Element{room=2, cls=4, teacher=1}, Element{room=3, cls=3, teacher=3}, Element{room=4, cls=2, teacher=2}]}
+Period{elements=[Element{room=1, cls=1, teacher=1}, Element{room=2, cls=2, teacher=3}]}
 period 14
-Period{elements=[Element{room=2, cls=4, teacher=1}, Element{room=4, cls=2, teacher=4}, Element{room=3, cls=1, teacher=2}]}
+Period{elements=[Element{room=1, cls=3, teacher=2}, Element{room=3, cls=4, teacher=4}, Element{room=4, cls=2, teacher=3}]}
 period 15
-Period{elements=[Element{room=1, cls=2, teacher=2}, Element{room=3, cls=4, teacher=1}, Element{room=4, cls=3, teacher=3}, Element{room=2, cls=1, teacher=4}]}
+Period{elements=[Element{room=1, cls=3, teacher=4}, Element{room=2, cls=1, teacher=2}, Element{room=3, cls=4, teacher=1}]}
 period 16
-Period{elements=[Element{room=3, cls=3, teacher=4}, Element{room=4, cls=2, teacher=2}, Element{room=1, cls=1, teacher=1}]}
+Period{elements=[Element{room=1, cls=4, teacher=4}, Element{room=3, cls=3, teacher=1}, Element{room=2, cls=2, teacher=2}]}
 period 17
-Period{elements=[Element{room=4, cls=2, teacher=2}, Element{room=2, cls=4, teacher=4}]}
+Period{elements=[Element{room=1, cls=1, teacher=1}, Element{room=2, cls=4, teacher=4}, Element{room=4, cls=3, teacher=3}]}
 period 18
-Period{elements=[Element{room=3, cls=4, teacher=1}, Element{room=4, cls=2, teacher=4}, Element{room=2, cls=1, teacher=2}]}
+Period{elements=[Element{room=1, cls=3, teacher=4}, Element{room=3, cls=4, teacher=1}, Element{room=2, cls=1, teacher=2}]}
 period 19
-Period{elements=[Element{room=2, cls=1, teacher=2}, Element{room=1, cls=4, teacher=3}, Element{room=3, cls=3, teacher=1}]}
+Period{elements=[Element{room=2, cls=2, teacher=2}, Element{room=3, cls=4, teacher=1}, Element{room=1, cls=3, teacher=3}]}
 period 20
-Period{elements=[Element{room=1, cls=3, teacher=4}, Element{room=2, cls=1, teacher=3}, Element{room=3, cls=4, teacher=1}]}
+Period{elements=[Element{room=4, cls=3, teacher=1}, Element{room=2, cls=1, teacher=2}]}
 period 21
-Period{elements=[Element{room=2, cls=4, teacher=3}, Element{room=4, cls=3, teacher=2}]}
+Period{elements=[Element{room=1, cls=4, teacher=2}, Element{room=4, cls=2, teacher=1}, Element{room=2, cls=1, teacher=3}]}
 period 22
-Period{elements=[Element{room=1, cls=1, teacher=4}, Element{room=2, cls=4, teacher=2}, Element{room=3, cls=2, teacher=3}, Element{room=4, cls=3, teacher=1}]}
+Period{elements=[Element{room=1, cls=1, teacher=2}, Element{room=2, cls=4, teacher=1}, Element{room=3, cls=3, teacher=3}, Element{room=4, cls=2, teacher=4}]}
 period 23
-Period{elements=[Element{room=1, cls=4, teacher=2}, Element{room=4, cls=3, teacher=1}, Element{room=3, cls=1, teacher=4}]}
+Period{elements=[Element{room=2, cls=1, teacher=2}, Element{room=3, cls=4, teacher=3}, Element{room=4, cls=3, teacher=4}]}
 period 24
-Period{elements=[Element{room=3, cls=3, teacher=3}, Element{room=4, cls=2, teacher=2}]}
+Period{elements=[Element{room=2, cls=2, teacher=4}, Element{room=4, cls=3, teacher=2}, Element{room=1, cls=1, teacher=3}, Element{room=3, cls=4, teacher=1}]}
 period 25
-Period{elements=[Element{room=1, cls=4, teacher=4}, Element{room=2, cls=1, teacher=2}]}
+Period{elements=[Element{room=2, cls=4, teacher=4}, Element{room=1, cls=2, teacher=1}, Element{room=4, cls=1, teacher=3}, Element{room=3, cls=3, teacher=2}]}
 period 26
-Period{elements=[Element{room=2, cls=1, teacher=4}, Element{room=1, cls=2, teacher=3}, Element{room=3, cls=4, teacher=1}, Element{room=4, cls=3, teacher=2}]}
+Period{elements=[Element{room=2, cls=4, teacher=3}, Element{room=4, cls=1, teacher=4}, Element{room=1, cls=3, teacher=1}]}
 period 27
-Period{elements=[Element{room=1, cls=4, teacher=3}, Element{room=2, cls=1, teacher=2}, Element{room=3, cls=2, teacher=4}]}
+Period{elements=[Element{room=3, cls=1, teacher=4}, Element{room=4, cls=3, teacher=2}, Element{room=1, cls=2, teacher=3}]}
 period 28
-Period{elements=[Element{room=4, cls=1, teacher=3}, Element{room=1, cls=3, teacher=4}, Element{room=2, cls=2, teacher=2}, Element{room=3, cls=4, teacher=1}]}
+Period{elements=[Element{room=3, cls=3, teacher=3}, Element{room=4, cls=4, teacher=1}, Element{room=1, cls=1, teacher=4}]}
 period 29
-Period{elements=[Element{room=4, cls=4, teacher=4}, Element{room=2, cls=1, teacher=2}, Element{room=1, cls=2, teacher=1}]}
+Period{elements=[Element{room=1, cls=3, teacher=4}, Element{room=3, cls=1, teacher=1}, Element{room=4, cls=2, teacher=2}]}
 period 30
-Period{elements=[Element{room=2, cls=2, teacher=3}, Element{room=4, cls=1, teacher=1}, Element{room=1, cls=3, teacher=4}]}
+Period{elements=[Element{room=1, cls=4, teacher=4}, Element{room=3, cls=2, teacher=3}, Element{room=4, cls=1, teacher=2}]}
 period 31
-Period{elements=[Element{room=1, cls=3, teacher=1}, Element{room=3, cls=2, teacher=3}]}
+Period{elements=[Element{room=2, cls=3, teacher=2}, Element{room=4, cls=4, teacher=4}, Element{room=3, cls=2, teacher=3}]}
 period 32
-Period{elements=[Element{room=1, cls=1, teacher=1}, Element{room=4, cls=2, teacher=4}, Element{room=2, cls=3, teacher=2}]}
+Period{elements=[Element{room=4, cls=2, teacher=4}, Element{room=3, cls=3, teacher=3}, Element{room=2, cls=1, teacher=2}]}
 period 33
-Period{elements=[Element{room=2, cls=2, teacher=2}, Element{room=3, cls=4, teacher=1}, Element{room=4, cls=1, teacher=4}]}
+Period{elements=[Element{room=1, cls=4, teacher=1}, Element{room=3, cls=1, teacher=4}, Element{room=2, cls=3, teacher=2}]}
 period 34
-Period{elements=[Element{room=2, cls=2, teacher=3}, Element{room=4, cls=3, teacher=2}]}
+Period{elements=[Element{room=4, cls=3, teacher=2}, Element{room=1, cls=1, teacher=4}, Element{room=3, cls=2, teacher=3}]}
 period 35
-Period{elements=[Element{room=2, cls=2, teacher=4}, Element{room=4, cls=4, teacher=3}]}
+Period{elements=[Element{room=3, cls=2, teacher=3}, Element{room=1, cls=3, teacher=4}, Element{room=2, cls=4, teacher=2}]}
 period 36
-Period{elements=[Element{room=4, cls=1, teacher=3}, Element{room=1, cls=3, teacher=4}, Element{room=2, cls=4, teacher=2}]}
+Period{elements=[Element{room=2, cls=3, teacher=1}, Element{room=3, cls=2, teacher=4}, Element{room=4, cls=1, teacher=3}]}
 period 37
-Period{elements=[Element{room=1, cls=3, teacher=4}, Element{room=3, cls=4, teacher=3}, Element{room=4, cls=1, teacher=1}]}
+Period{elements=[Element{room=1, cls=2, teacher=4}, Element{room=4, cls=3, teacher=1}, Element{room=3, cls=4, teacher=3}]}
 period 38
-Period{elements=[Element{room=1, cls=2, teacher=4}, Element{room=3, cls=1, teacher=1}, Element{room=4, cls=3, teacher=3}]}
+Period{elements=[Element{room=1, cls=4, teacher=1}, Element{room=2, cls=2, teacher=3}, Element{room=3, cls=1, teacher=2}]}
 period 39
-Period{elements=[Element{room=1, cls=3, teacher=3}, Element{room=4, cls=2, teacher=4}]}
+Period{elements=[Element{room=3, cls=1, teacher=1}, Element{room=1, cls=3, teacher=4}, Element{room=2, cls=2, teacher=2}]}
 period 40
-Period{elements=[Element{room=1, cls=4, teacher=1}, Element{room=3, cls=2, teacher=3}]}
+Period{elements=[Element{room=3, cls=2, teacher=3}, Element{room=2, cls=1, teacher=4}, Element{room=4, cls=4, teacher=1}]}
 
 }
