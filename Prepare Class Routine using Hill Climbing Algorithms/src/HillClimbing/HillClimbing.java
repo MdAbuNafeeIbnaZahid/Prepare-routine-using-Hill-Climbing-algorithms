@@ -1,4 +1,5 @@
 package HillClimbing;
+import HillClimbing.SelectingSuccessor.*;
 
 import java.util.List;
 
@@ -7,27 +8,32 @@ import java.util.List;
  */
 public class HillClimbing {
     Problem problem;
+    SuccessorSelector successorSelector;
 
-    public HillClimbing(Problem problem) {
+    public HillClimbing(Problem problem, SuccessorSelector successorSelector) {
         this.problem = problem;
+        this.successorSelector = successorSelector;
     }
+
+
 
 
     // CAUTION : it may return null
-    private CandidateSolution getBestCandidateSolution(List<CandidateSolution> solutions)
-    {
-        CandidateSolution bestCandidate = null;
-        int minCost = Integer.MAX_VALUE;
-        for (CandidateSolution cs : solutions)
-        {
-            if ( cs.getCost() < minCost )
-            {
-                minCost = cs.getCost();
-                bestCandidate = cs;
-            }
-        }
-        return bestCandidate;
-    }
+    // I think I don't this method at all as I am using an interface for this work
+//    private CandidateSolution getNextCandidateSolution(List<CandidateSolution> solutions)
+//    {
+//        CandidateSolution bestCandidate = null;
+//        int minCost = Integer.MAX_VALUE;
+//        for (CandidateSolution cs : solutions)
+//        {
+//            if ( cs.getCost() < minCost )
+//            {
+//                minCost = cs.getCost();
+//                bestCandidate = cs;
+//            }
+//        }
+//        return bestCandidate;
+//    }
 
 
 
@@ -56,17 +62,17 @@ public class HillClimbing {
     {
         while (true)
         {
-            List<CandidateSolution> successors = initialSolution.getSuccessors();
-            CandidateSolution bestSuccessor = getBestCandidateSolution(successors);
+            List<CandidateSolution> successors = initialSolution.getNeighbors();
+            CandidateSolution nextCandidateSolution = successorSelector.getNextSuccessor(successors, initialSolution);
 
 
-            if ( bestSuccessor==null || bestSuccessor.getCost() >= initialSolution.getCost() )
+            if ( nextCandidateSolution==null || nextCandidateSolution.getCost() >= initialSolution.getCost() )
             {
                 break;
             }
 
-            System.out.println( " bestSuccessor.getCost() =  " + bestSuccessor.getCost() );
-            initialSolution = bestSuccessor;
+            System.out.println( " nextCandidateSolution.getCost() =  " + nextCandidateSolution.getCost() );
+            initialSolution = nextCandidateSolution;
         }
 
         return initialSolution;

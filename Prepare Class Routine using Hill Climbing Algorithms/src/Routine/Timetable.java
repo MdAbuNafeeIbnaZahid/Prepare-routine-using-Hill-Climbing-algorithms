@@ -152,7 +152,7 @@ public class Timetable implements CandidateSolution, Serializable {
     // CAUTION : it may return an empty list
     // Here the Timetable will NOT return ALL the successors, rather it will SKIP some WORSE successors
     @Override
-    public List<CandidateSolution> getSuccessors() {
+    public List<CandidateSolution> getNeighbors() {
         List<CandidateSolution> successors = new ArrayList<CandidateSolution>();
         for (int a = 1; a <= periodCnt; a++) // old period slot
         {

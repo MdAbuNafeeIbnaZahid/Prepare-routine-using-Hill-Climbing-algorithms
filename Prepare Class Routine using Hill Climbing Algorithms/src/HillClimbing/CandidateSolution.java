@@ -8,5 +8,5 @@ import java.util.List;
 public interface CandidateSolution {
 
     public int getCost();
-    public List<CandidateSolution> getSuccessors();
+    public List<CandidateSolution> getNeighbors();
 }

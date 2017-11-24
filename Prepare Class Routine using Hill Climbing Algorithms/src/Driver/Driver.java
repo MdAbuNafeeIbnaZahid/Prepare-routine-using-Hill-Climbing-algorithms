@@ -1,5 +1,6 @@
 package Driver;
 
+import HillClimbing.HillClimbingFactory;
 import HillClimbing.CandidateSolution;
 import HillClimbing.HillClimbing;
 import IO.Input.ScannerFactory;
@@ -31,7 +32,7 @@ public class Driver {
 
         out.println( configuration );
 
-        HillClimbing hillClimbing = new HillClimbing(configuration);
+        HillClimbing hillClimbing = HillClimbingFactory.getHillClimbing(configuration, HillClimbingFactory.STEEPEST_ASCENT_HILL_CLIMBING);
 
         CandidateSolution solution = hillClimbing.climbHillRandomRestart();
 
