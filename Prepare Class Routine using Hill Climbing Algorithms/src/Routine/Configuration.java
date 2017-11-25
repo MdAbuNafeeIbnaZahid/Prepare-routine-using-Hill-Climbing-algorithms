@@ -14,8 +14,8 @@ import java.util.Random;
 public class Configuration implements Problem {
 
    private int roomWeight = 1;
-   private int classWeight = 2;
-   private int teacherWeight = 3;
+   private int classWeight = 1;
+   private int teacherWeight = 1;
 
     public int getRoomWeight() {
         return roomWeight;

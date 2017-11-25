@@ -28,7 +28,7 @@ public class Driver {
 
 
 
-        Configuration configuration = ConfigurationFactory.getProblem(in);
+        Configuration configuration = ConfigurationFactory.getConfiguration(in);
 
         out.println( configuration );
 

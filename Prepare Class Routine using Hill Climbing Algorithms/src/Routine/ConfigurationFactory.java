@@ -25,7 +25,7 @@ public class ConfigurationFactory {
         return ret;
     }
 
-    public static Configuration getProblem(Scanner scanner)
+    public static Configuration getConfiguration(Scanner scanner)
     {
         int periodCnt;
         int roomCnt;
